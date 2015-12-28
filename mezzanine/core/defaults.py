@@ -371,8 +371,9 @@ register_setting(
     description=_("Title that will display at the top of the site, and be "
         "appended to the content of the HTML title tags on every page."),
     editable=True,
-    default="Mezzanine",
-    translatable=True,
+    #default="Mezzanine",
+    default="HuMar Medical",
+	translatable=True,
 )
 
 register_setting(
@@ -380,8 +381,8 @@ register_setting(
     label=_("Tagline"),
     description=_("A tag line that will appear at the top of all pages."),
     editable=True,
-    default=_("An open source content management platform."),
-    translatable=True,
+    #default=_("An open source content management platform."),
+	translatable=True,
 )
 
 register_setting(
