@@ -16,6 +16,10 @@
 {% endifinstalled %}
 
 {% compress css %}
+<!-- slider css-->
+<link rel="stylesheet" href="{% static "responsiveslides/responsiveslides.css" %}"/>
+
+
 <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 <link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
@@ -32,6 +36,9 @@
 {% endcompress %}
 
 {% compress js %}
+<!--slider js-->
+<script src="{% static "responsiveslides/responsiveslides.min.js" %}"></script>
+
 <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
@@ -91,7 +98,6 @@
 {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
 {% endspaceless %}
 </ul>
-
 </div>
 
 <div class="container">
@@ -107,6 +113,9 @@
     {% block main %}{% endblock %}
 </div>
 
+
+
+
 <div class="col-md-3 right">
     <!--{% nevercache %}
     {% include "includes/language_selector.html" %}
@@ -119,7 +128,7 @@
     {% include "twitter/tweets.html" %}
     {% endifinstalled %}
     {% endblock %}
-    </div>
+	</div>
     </div>
 </div>
 
@@ -145,6 +154,8 @@
     <span class="separator">|</span>
     <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
     {% endifinstalled %}
+	
+
 </p>
 </div>
 </div>
