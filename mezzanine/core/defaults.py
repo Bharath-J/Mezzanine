@@ -381,7 +381,8 @@ register_setting(
     label=_("Tagline"),
     description=_("A tag line that will appear at the top of all pages."),
     editable=True,
-    default=_("An open source content management platform."),
+    #default=_("An open source content management platform."),
+	default=_(""),
 	translatable=True,
 )
 
